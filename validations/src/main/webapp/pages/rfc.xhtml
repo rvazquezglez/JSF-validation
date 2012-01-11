@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+ 	  xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+<h:head><title>Enter Bid</title>
+<link href="./css/styles.css" 
+      rel="stylesheet" type="text/css"/> 
+</h:head>
+<h:body>
+<h:form>
+	<h:inputText id="rfc" value="#{rfcWrapper.rfc}"
+	  converterMessage="Error al interpretar rfc."
+	>
+	  <f:converter converterId="converter.RFCConverter"></f:converter>
+	</h:inputText>
+	<h:message for="rfc"/>
+	<h:commandButton value="Validar" action="#{rfcWrapper.validate}"/>
+	
+</h:form>
+
+
+</h:body></html>
+

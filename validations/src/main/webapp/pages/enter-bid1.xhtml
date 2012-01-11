@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+<h:head><title>Enter Bid</title>
+<link href="./css/styles.css" 
+      rel="stylesheet" type="text/css"/> 
+</h:head>
+<h:body>
+<div align="center">
+<table border="5">
+  <tr><th class="title">Enter Bid</th></tr>
+</table>
+<p/>
+<fieldset>
+<legend>Parameters for Your Bid</legend>
+<h:form>
+  <h:messages styleClass="error"/>
+  <table>
+  <tr>
+    <td>User ID: 
+    <h:inputText value="#{bidBean1.userID}"/></td></tr>
+  <tr>
+    <td>Keyword: 
+    <h:inputText value="#{bidBean1.keyword}"/></td></tr>
+  <tr>
+    <td>Bid Amount: 
+    $<h:inputText value="#{bidBean1.bidAmount}"/></td></tr>
+  <tr>
+    <td>Duration: 
+    <h:inputText value="#{bidBean1.bidDuration}"/></td></tr>
+  <tr><th>
+      <h:commandButton value="Send Bid!" 
+                       action="#{bidBean1.doBid}"/></th></tr>
+  </table><h:commandButton value="" action="" />
+  
+</h:form>
+</fieldset>
+
+
+</div></h:body></html>
